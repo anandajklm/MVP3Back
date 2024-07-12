@@ -16,10 +16,6 @@ from resources.documentation import blp as DocumentationBlueprint
 
 from logger import create_initial_coins
 
-app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True, allow_headers="*", methods=["GET", "POST", "PUT", "DELETE"])  # Permite todas as origens e métodos.
-
-api = Api(app,  title='Sua Carteira de Investimentos')
 
 def create_app(db_url=None):
     app = Flask(__name__)
